@@ -8,7 +8,7 @@ const main = async (name,email,youtube) =>{
 let transporter = nodemailer.createTransport({
 	service: 'gmail',
 	auth: {
-		user: 'your_email'
+		user: 'your_email',
 		pass: 'your_pw'
 	},
 });
