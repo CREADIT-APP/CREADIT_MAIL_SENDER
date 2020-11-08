@@ -6,6 +6,7 @@ const url = require('url')
 require('dotenv').config();
 const { MAIL_ID, MAIL_PW } = process.env;
 let successPageLink = 'http://creadit.godomall.com/main/html.php?htmid=main/estimate-success.html'
+
 const getMailForm = mailInfo => {
 	console.log(mailInfo);	
 	return`안녕하세요. 크리에이딧입니다.\n\n문의주신 견적 요청사항 보내드립니다.\n\n종사 업종(업체명) : ${mailInfo.store_name}\n\n신청자 명 : ${mailInfo.name}\n\n컨설팅 횟수 : ${mailInfo.consult_count}\n\n컨설팅 종류 : ${mailInfo.consult_type}\n\n컨설팅 상세 : ${mailInfo.reason}\n\n유튜브 링크 : ${mailInfo.link}\n\n`}
@@ -28,7 +29,6 @@ const sendMail = async (mailInfo, send) =>{
 			},
 		});
 
-<<<<<<< HEAD
 		let info = await transporter.sendMail({
 			from: `"CREADIT" <creadit2020@gmail.com>`,
 			to: 'creadit2020@gmail.com',
@@ -37,7 +37,6 @@ const sendMail = async (mailInfo, send) =>{
 		});
 		console.log('Msg sent: %s',info.messageId);
 	}
-=======
 const main = async (name,email,youtube) =>{
 
 let transporter = nodemailer.createTransport({
