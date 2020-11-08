@@ -1,0 +1,6 @@
+.env
+.idea/
+mail_template.ejs
+tmpServer2.js
+mailSender.js
+

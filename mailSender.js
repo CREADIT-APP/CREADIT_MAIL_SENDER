@@ -12,7 +12,7 @@ let transporter = nodemailer.createTransport({
 
 let info = await transporter.sendMail({
 	from: `"nodeMailer Test" <daehyun1003@gmail.com>`,
-	to: 'souljit2@gmail.com',
+	to: 'tommy1003@naver.com',
 	subject: '제발 되면 좋겠다...',
 	text: '하하하하',
 });
