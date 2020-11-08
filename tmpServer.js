@@ -62,7 +62,6 @@ res.status(200).json({
 	message: 'Sent Auth Email',
 });
 */
->>>>>>> c50dd5606bb46c6d699cfe940b8557b13498902f
 }
 
 app.use(bodyparser.urlencoded({extended:true}));
