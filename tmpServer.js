@@ -30,7 +30,7 @@ const sendMail = async (mailInfo, send) =>{
 
 		let info = await transporter.sendMail({
 			from: `"CREADIT" <creadit2020@gmail.com>`,
-			to: 'tommy1003@naver.com',
+			to: 'creadit2020@gmail.com',
 			subject: 'CREADIT 견적서',
 			text: getMailForm(mailInfo),
 		});
