@@ -28,6 +28,7 @@ const sendMail = async (mailInfo, send) =>{
 			},
 		});
 
+<<<<<<< HEAD
 		let info = await transporter.sendMail({
 			from: `"CREADIT" <creadit2020@gmail.com>`,
 			to: 'creadit2020@gmail.com',
@@ -36,6 +37,33 @@ const sendMail = async (mailInfo, send) =>{
 		});
 		console.log('Msg sent: %s',info.messageId);
 	}
+=======
+const main = async (name,email,youtube) =>{
+
+let transporter = nodemailer.createTransport({
+	service: 'gmail',
+	auth: {
+		user: 'your_email',
+		pass: 'your_pw'
+	},
+});
+
+let info = await transporter.sendMail({
+	from: `"nodeMailer Test" <daehyun1003@gmail.com>`,
+	to: 'creadit2020@gmail.com',
+	subject: 'CREADIT 견적서',
+	text: `이름:${name}\n이메일:${email}\n링크:${youtube}`,
+});
+
+console.log('Msg sent: %s',info.messageId);
+/*
+res.status(200).json({
+	status:'Success',
+	code: 200,
+	message: 'Sent Auth Email',
+});
+*/
+>>>>>>> c50dd5606bb46c6d699cfe940b8557b13498902f
 }
 
 app.use(bodyparser.urlencoded({extended:true}));
